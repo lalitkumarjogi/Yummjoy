@@ -1,0 +1,5 @@
+<p>user-list works!</p>
+<button (click)="logout()">Logout</button>
+<h2 *ngIf="isUser">user is Logged In</h2>
+<span>{{userToken}}</span>
+<h2 *ngIf="!isUser">user is not Logged In </h2>

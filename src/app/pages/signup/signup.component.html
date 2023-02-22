@@ -1,0 +1,23 @@
+<form [formGroup]="loginForm">
+    <div class="imgcontainer">
+      <img alt="">
+      <h2>Sign Up Form</h2>
+    </div>
+  
+    <div class="container">
+      <label for="uname"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email"  formControlName="username">
+      <ng-container *ngIf="this.loginForm.controls.username.touched || this.loginForm.controls.username.dirty">
+        <p class="error-txt" *ngIf="this.loginForm.controls.username.hasError('required')">Kindly enter your email.</p>
+        <p class="error-txt" *ngIf="this.loginForm.controls.username.hasError('email')">Kindly enter valid email.</p>
+    </ng-container>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" formControlName="password">
+      <ng-container *ngIf="this.loginForm.controls.password.touched || this.loginForm.controls.password.dirty">
+        <p class="error-txt" *ngIf="this.loginForm.controls.password.hasError('required')">Kindly enter your password</p>
+    </ng-container>
+  
+      <button type="submit" (click)="$event.stopPropagation();submitDetails(loginForm.value)">Login</button>
+    </div>
+  </form> 
