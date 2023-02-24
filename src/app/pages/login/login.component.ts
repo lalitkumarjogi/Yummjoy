@@ -29,6 +29,8 @@ export class LoginComponent {
       this.loginForm.controls.username.markAllAsTouched()
       return
     }
+
+    
     const email = this.loginForm.value.username as string;
     const password = this.loginForm.value.password as string;
     this.authenticationService.SignIn(email , password).then(response=>{

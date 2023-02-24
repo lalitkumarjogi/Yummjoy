@@ -10,10 +10,13 @@ import { AuthService } from 'src/app/services/authService';
 export class UserListComponent {
   isUser:boolean = false;
   userToken:string = "";
+  email:string= ""
 
   constructor(private authService:AuthService){
+
     this.isUser = this.authService.isAuthenticated();
     this.userToken = localStorage.getItem("accessToken") as string
+    this.email = localStorage.getItem("email") as string
     console.log("this.userToken ====>" , this.userToken)
   }
 
