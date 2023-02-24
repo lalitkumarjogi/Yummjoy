@@ -1,5 +1,6 @@
-<p>user-list works!</p>
+<p>Welcome back</p>
 <button (click)="logout()">Logout</button>
 <h2 *ngIf="isUser">user is Logged In</h2>
-<span>{{userToken}}</span>
+<span style="color: red;">{{userToken}}</span> <br>
+<span style="color: red;">{{email}}</span>
 <h2 *ngIf="!isUser">user is not Logged In </h2>

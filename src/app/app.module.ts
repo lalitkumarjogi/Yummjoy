@@ -11,6 +11,7 @@ import { environment } from "src/environments/environment";
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UserListComponent } from './pages/user-list/user-list.component';
+import { FormComponent } from './pages/form/form.component';
 
 
 
@@ -19,7 +20,8 @@ import { UserListComponent } from './pages/user-list/user-list.component';
     AppComponent,
     SignupComponent,
     LoginComponent,
-    UserListComponent
+    UserListComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
