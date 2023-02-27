@@ -21,7 +21,7 @@ import { FormComponent } from './pages/form/form.component';
     SignupComponent,
     LoginComponent,
     UserListComponent,
-    FormComponent
+    FormComponent,
   ],
   imports: [
     BrowserModule,
